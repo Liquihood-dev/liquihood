@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "LiquiHood Landing Page"
+version = "1.0.0"
+id = "artifacts/liquihood"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21657
+
+[services.development]
+run = "pnpm --filter @workspace/liquihood run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/liquihood", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/liquihood/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21657"
+BASE_PATH = "/"

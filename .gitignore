@@ -53,7 +53,7 @@ Thumbs.db
 .replitignore
 replit.nix
 replit.md
-.replit-artifact/
+# .replit-artifact/ — kept in git; Replit needs these to register artifact services
 attached_assets/
 .local/
 .cache/replit/

@@ -70,4 +70,4 @@ export const DEX_PAIR_ADDRESS: Record<string, `0x${string}`> = {
  * Real robinscan stock tokens start with 0 pool liquidity — show "No Liquidity"
  * until users supply.
  */
-export const REAL_MARKET_IDS = new Set(['cashcat', 'weth', 'virtual', 'usde', 'aapl', 'amzn', 'nvda', 'tsla', 'mstr']);
+export const REAL_MARKET_IDS = new Set(['usd-g', 'cashcat', 'weth', 'virtual', 'usde', 'aapl', 'amzn', 'nvda', 'tsla', 'mstr']);

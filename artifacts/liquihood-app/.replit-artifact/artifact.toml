@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/liquihood-app/"
+title = "Liquihood App"
+version = "1.0.0"
+id = "artifacts/liquihood-app"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/liquihood-app/" ]
+localPort = 25896
+
+[services.development]
+run = "pnpm --filter @workspace/liquihood-app run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/liquihood-app", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/liquihood-app/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25896"
+BASE_PATH = "/liquihood-app/"
