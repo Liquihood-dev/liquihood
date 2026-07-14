@@ -1,0 +1,8 @@
+{
+  "network": "Robinhood Chain",
+  "chainId": 4663,
+  "deployedAt": "2026-07-14",
+  "address": "0xa7c99a3cf3e1c4f317124cb168b066c6d86c0be7",
+  "lendingPool": "0xcf689f3eFAbCE22A0f29FE0D47A5fd5d6e7e7291",
+  "router": "0xa852731d2ff4ece14c702b1e356cfe6808eaa486"
+}

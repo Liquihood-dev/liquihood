@@ -1,0 +1,6 @@
+- [LiquiHood landing page](liquihood-landing.md) — DeFi landing on Robinhood Chain; design conventions, accessibility setup, and em-dash policy.
+- [Tailwind v4 setup](tailwind-v4-setup.md) — liquihood uses `@import "tailwindcss"` + `@theme {}`; v3 directives break all utility classes silently.
+- [Liquihood App architecture](liquihood-app-arch.md) — Full protocol app at /liquihood-app; FULLY ON-CHAIN as of 2026-07-12; all 7 tokens deployed, keeper running.
+- [Contract deployment](contract-deployment.md) — 8 core contracts live on Robinhood Chain (4663); addresses, rate params, next steps for asset config.
+- [Real vs custom token addresses](real-vs-custom-tokens.md) — WETH switched to real Robinhood Chain token; other markets still use custom LiquihoodToken ERC-20s.
+- [Flash liquidator design](flash-liquidator.md) — FlashLiquidator.sol uses _pendingPair guard; bot routes via flash when direct balance < close factor; USDG-debt only currently.

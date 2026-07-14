@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+/* ── Design tokens (Tailwind v4 theme) ── */
+@theme {
+  --color-background: #000000;
+  --color-foreground: #EDEDED;
+  --color-card: #0A0A0A;
+  --color-card-foreground: #EDEDED;
+  --color-primary: #D0EF19;
+  --color-primary-foreground: #000000;
+  --color-muted: #0A0A0A;
+  --color-muted-foreground: #888888;
+  --color-border: rgba(255,255,255,0.08);
+  --color-ring: #D0EF19;
+  --radius-DEFAULT: 0.75rem;
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+}
+
+/* ── Raw CSS tokens for inline-style use ── */
+:root {
+  --bg:             #000000;
+  --bg-elevated:    #0A0A0A;
+  --border-clr:     rgba(255,255,255,0.08);
+  --border-hover:   rgba(208,239,25,0.45);
+  --text-primary:   #EDEDED;
+  --text-secondary: #888888;
+  --accent:         #D0EF19;
+  --accent-dim:     #A8C200;
+  --accent-glow:    rgba(208,239,25,0.35);
+  --gradient-hero:  linear-gradient(180deg,#FFFFFF 0%,#E5F56A 55%,#D0EF19 100%);
+  --danger:         #FF4D4D;
+}
+
+/* ── Global base ── */
+@layer base {
+  html { scroll-behavior: smooth; }
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    background: #000000;
+    color: #EDEDED;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  ::selection { background: rgba(208,239,25,0.18); color: #D0EF19; }
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #000; }
+::-webkit-scrollbar-thumb { background: #1a1a1a; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #2a2a2a; }
+
+/* ── Gradient text ── */
+@keyframes gradient-sweep {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.text-gradient-hero {
+  background: var(--gradient-hero);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: gradient-sweep 4s ease infinite;
+}
+.text-gradient-accent {
+  background: linear-gradient(135deg, #D0EF19 0%, #E5F56A 50%, #D0EF19 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: gradient-sweep 3s ease infinite;
+}
+
+/* ── Beam comet ── */
+@keyframes beam-travel {
+  0%   { transform: translateX(-200%); }
+  100% { transform: translateX(2000%); }
+}
+.beam-comet {
+  animation: beam-travel 5s linear infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 80px;
+  background: linear-gradient(90deg, transparent, #D0EF19, rgba(208,239,25,0.6), transparent);
+  filter: blur(0.5px);
+}
+.beam-comet-delay { animation-delay: 2.5s; }
+
+/* ── SVG path pulse ── */
+@keyframes dash-flow {
+  from { stroke-dashoffset: 80; }
+  to   { stroke-dashoffset: 0; }
+}
+.path-pulse {
+  stroke-dasharray: 8 6;
+  animation: dash-flow 1.8s linear infinite;
+}
+.path-pulse-slow {
+  stroke-dasharray: 8 6;
+  animation: dash-flow 2.5s linear infinite;
+}
+
+/* ── Node glow breathe ── */
+@keyframes node-breathe {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50%       { opacity: 0.55; transform: scale(1.03); }
+}
+.node-glow { animation: node-breathe 3s ease-in-out infinite; }
+
+/* ── Dot grid ── */
+.dot-grid {
+  background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+.dot-grid-fade {
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 30%, transparent 80%);
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .text-gradient-hero, .text-gradient-accent { animation: none; }
+  .beam-comet { animation: none; opacity: 0; }
+  .path-pulse, .path-pulse-slow { animation: none; }
+  .node-glow { animation: none; }
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

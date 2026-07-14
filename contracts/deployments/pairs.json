@@ -1,0 +1,12 @@
+{
+  "network": "Robinhood Chain",
+  "chainId": 4663,
+  "createdAt": "2026-07-14",
+  "factory": "0xe9df4972491b7e782f4544a8975e0f65d7df897c",
+  "router": "0xa852731d2ff4ece14c702b1e356cfe6808eaa486",
+  "pairs": {
+    "WETH/USDG": "0xaE1Dd7ED8f950CcC6AE8BA3e4A3575041694a85F",
+    "CASHCAT/WETH": "0xAb27bd9aeCe2B61089AB59c08757c668fd092987",
+    "VIRTUAL/WETH": "0xE335CCeA8D6D9233d5F37344446c6B36A7f9f430"
+  }
+}

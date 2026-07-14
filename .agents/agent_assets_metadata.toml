@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "iX14u1USLA3EnkhuCZRCl"
+uri = "file://liquihood-app-docs.md"
+type = "text"
+title = "Liquihood App — Complete Documentation"

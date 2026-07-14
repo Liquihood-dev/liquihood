@@ -1,0 +1,9 @@
+{
+  "network": "Robinhood Chain",
+  "chainId": 4663,
+  "deployedAt": "2026-07-14",
+  "factory": "0xe9df4972491b7e782f4544a8975e0f65d7df897c",
+  "router": "0xa852731d2ff4ece14c702b1e356cfe6808eaa486",
+  "weth": "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+  "initCodeHash": "0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f"
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+    <!-- Primary SEO -->
+    <title>Liquihood | Borrow USDG Against Stocks, Crypto & Stablecoins</title>
+    <meta name="description" content="Liquihood is a non-custodial lending protocol on Robinhood Chain. Deposit tokenized stocks, ETH, or stablecoins and borrow USDG — without selling your assets." />
+    <meta name="robots" content="index, follow" />
+    <meta name="virtual-protocol-site-verification" content="84906bf073a40b151c26a0a191a4ac86" />
+    <link rel="canonical" href="https://liquihood.xyz/" />
+
+    <!-- Open Graph (link preview) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://liquihood.xyz/" />
+    <meta property="og:site_name" content="Liquihood" />
+    <meta property="og:title" content="Liquihood | Borrow USDG Against Stocks, Crypto & Stablecoins" />
+    <meta property="og:description" content="Non-custodial lending on Robinhood Chain. Use tokenized stocks, ETH, or stablecoins as collateral and borrow USDG — keep your exposure, unlock liquidity." />
+    <meta property="og:image" content="https://liquihood.xyz/og-image.png" />
+    <meta property="og:image:width" content="1024" />
+    <meta property="og:image:height" content="1024" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@liquihood" />
+    <meta name="twitter:title" content="Liquihood | Borrow USDG Against Stocks, Crypto & Stablecoins" />
+    <meta name="twitter:description" content="Non-custodial lending on Robinhood Chain. Use tokenized stocks, ETH, or stablecoins as collateral and borrow USDG — keep your exposure, unlock liquidity." />
+    <meta name="twitter:image" content="https://liquihood.xyz/og-image.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <script>
+      // app.liquihood.xyz has a Cloudflare rule that strips the /liquihood-app
+      // prefix, causing a redirect loop if we stay on that hostname.
+      // Forward directly to the primary domain where the app path works correctly.
+      if (window.location.hostname === 'app.liquihood.xyz') {
+        window.location.replace('https://liquihood.xyz/liquihood-app/markets');
+      }
+    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
